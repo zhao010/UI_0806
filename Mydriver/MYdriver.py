@@ -3,11 +3,6 @@ import os
 import sys
 root_path=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(root_path)
-from logging import config
-
-File_config = '../config/log.conf'
-config.fileConfig(File_config)
-logger = logging.getLogger()
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -34,6 +29,5 @@ def my_driver():
     #executable_path = '/usr/bin/chromedriver'
     mdriver.maximize_window()
     mdriver.implicitly_wait(10)
-    a=(mdriver.page_source)
-    logger.info(a)
+    print(mdriver.page_source)
     return mdriver
