@@ -3,7 +3,6 @@ import unittest
 
 from Mydriver.MYdriver import my_driver
 from logging import config
-
 File_config = '../config/log.conf'
 config.fileConfig(File_config)
 logger = logging.getLogger()

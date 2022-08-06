@@ -1,9 +1,15 @@
 #coding = utf-8
+import os
+import sys
+import time
+import unittest
 
+root_path=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(root_path)
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-
+#executable='/usr/bin/chromedriver'
 import os
 
 
@@ -21,7 +27,7 @@ def my_driver():
     opt.add_argument('--disable-gpu')
     opt.add_argument('--hide-scrollbars')  # 隐藏滚动条, 应对一些特殊页面
     #opt.add_argument("--remote-debugging-port=9222")
-    mdriver = webdriver.Chrome(chrome_options=opt)
+    mdriver = webdriver.Chrome(executable_path = r'/usr/bin/chromedriver',chrome_options=opt)
     #executable_path = '/usr/bin/chromedriver'
     mdriver.maximize_window()
     mdriver.implicitly_wait(10)
