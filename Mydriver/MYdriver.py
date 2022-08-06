@@ -16,6 +16,6 @@ def my_driver():
     opt.add_argument('--hide-scrollbars')  # 隐藏滚动条, 应对一些特殊页面
     #opt.add_argument("--remote-debugging-port=9222")
     mdriver = webdriver.Chrome(executable_path = '/usr/bin/chromedriver',chrome_options=opt)
-    mdriver.maximize_window()
-    #mdriver.implicitly_wait(10)
+    #mdriver.maximize_window()
+    mdriver.implicitly_wait(10)
     return mdriver
