@@ -3,6 +3,10 @@ import os
 import sys
 import time
 import unittest
+from logging import config
+File_config = '../config/log.conf'
+config.fileConfig(File_config)
+logger = logging.getLogger()
 
 root_path=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(root_path)
@@ -31,5 +35,6 @@ def my_driver():
     #executable_path = '/usr/bin/chromedriver'
     mdriver.maximize_window()
     mdriver.implicitly_wait(10)
-    print(mdriver.page_source)
+    a=(mdriver.page_source)
+    logger.info(a)
     return mdriver
