@@ -31,4 +31,5 @@ def my_driver():
     #executable_path = '/usr/bin/chromedriver'
     mdriver.maximize_window()
     mdriver.implicitly_wait(10)
+    print(mdriver.page_source)
     return mdriver
