@@ -1,15 +1,14 @@
 #coding = utf-8
 import os
 import sys
-import time
-import unittest
+root_path=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(root_path)
 from logging import config
+
 File_config = '../config/log.conf'
 config.fileConfig(File_config)
 logger = logging.getLogger()
 
-root_path=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(root_path)
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
