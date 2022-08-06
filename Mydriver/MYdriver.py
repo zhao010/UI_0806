@@ -11,7 +11,7 @@ def my_driver():
     opt.add_argument('--no-sandbox')
     opt.add_argument('--disable-gpu')
     opt.add_argument('--hide-scrollbars')  # 隐藏滚动条, 应对一些特殊页面
-    mdriver = webdriver.Chrome('/usr/bin/chromedriver',options=opt)
+    mdriver = webdriver.Chrome('/usr/local/bin/chromedriver',options=opt)
     mdriver.maximize_window()
     mdriver.implicitly_wait(10)
     return mdriver
