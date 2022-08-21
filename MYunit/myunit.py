@@ -1,5 +1,6 @@
 import logging
 import unittest
+import os
 
 from Mydriver.MYdriver import my_driver
 from logging import config
@@ -14,5 +15,7 @@ class Myunit(unittest.TestCase):
     def tearDown(self):
         self.n_dirver.quit()
         logger.info('_______w无图形化界面关闭驱动_______')
+        os.system("pkill chrome")
+        os.system("pkill chromedriver")
 if __name__ == '__main__':
     Myunit.main()
