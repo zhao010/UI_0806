@@ -108,7 +108,10 @@ from xml.sax import saxutils
 # e.g.
 #   >>> logging.basicConfig(stream=HTMLTestRunner.stdout_redirector)
 #   >>>
-
+import os
+import sys
+root_path=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(root_path)
 class OutputRedirector(object):
     """ Wrapper to redirect stdout or stderr """
     def __init__(self, fp):
